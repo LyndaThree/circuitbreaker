@@ -140,6 +140,8 @@ class CircuitBreaker(object):
         if self._name is None:
             try:
                 self._name = function.__qualname__
+                # added this line of code
+                print(self.name)
             except AttributeError:
                 self._name = function.__name__
 
